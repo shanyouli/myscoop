@@ -1,0 +1,13 @@
+﻿{
+    "version":  "v5.2.1",
+    "extract_dir":  "Office Tool",
+    "url":  "https://server.lancdn.com/landian/OfficeToolPlus/OTool.zip",
+    "homepage":  "https://otp.landian.la/zh-cn/",
+    "hash":  "664F136ECC9E5C60AAEA6952EFD6FCCD73B71F12AEA1E2EF1C9D11EE02245E74",
+    "shortcuts":  [
+        [
+            "Office Tool Lite.exe",
+            "OfficeTool"
+        ]
+    ]
+}

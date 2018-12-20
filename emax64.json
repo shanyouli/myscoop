@@ -1,0 +1,32 @@
+﻿{
+    "version":  "20180619",
+    "license":  "GPL-3.0-ohly",
+    "extract_dir":  "emax64pd",
+    "url":  "https://github.com/m-parashar/emax64/releases/download/pdumper-20180619/emax64-pdumper-bin-20180619.7z",
+    "homepage":  "https://ntemacs.sourceforge.io/",
+    "hash":  "sha1:18616ba33a55156b668ad6e6048507db8d2b3ebe",
+    "bin":  [
+        "bin\\runemacs.exe",
+        "bin\\emacs.exe",
+        "bin\\emacsclientw.exe",
+        "bin\\etags.exe",
+        "bin\\ctags.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/m-parasshar/emax64"
+    },
+    "autoupdate": {
+        "url": "https://github.com/m-parashar/emax64/releases/download/pdumper-$version/emax64-pdumper-bin-$version.7z"
+    },
+    "shortcuts": [
+        [
+        "bin\\runemacs.exe",
+        "Emacs"
+        ],
+        [
+            "bin\\emacsclientw.exe",
+            "Emacs Client",
+            "-c -n -a \"\""
+        ]
+    ]
+}

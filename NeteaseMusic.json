@@ -1,0 +1,18 @@
+﻿{
+    "version":  "2.5.1.196734",
+    "description": "Netease Cloud Music",
+    "homepage": "https://music.163.com",
+    "url":  "https://d1.music.126.net/dmusic/cloudmusicsetup_2.5.1.196734.exe#/dl.7z",
+    "hash":  "DEC89C8D6BC92C368138E19B6E87463860AD93CD95AD9D6B8471BD3789549ED3",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "bin": "cloudmusic.exe",
+    "shortcuts": [
+        [
+            "cloudmusic.exe",
+            "NeteaseMusic"
+        ]
+    ],
+    "auttoupdate": {
+        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup_$version.exe#/dl.7z"
+    }
+}

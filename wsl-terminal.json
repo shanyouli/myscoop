@@ -1,0 +1,23 @@
+﻿{
+    "version":  "0.8.11",
+    "license":  "MIT",
+    "extract_dir":  "wsl-terminal",
+    "url":  "https://github.com/goreliu/wsl-terminal/releases/download/v0.8.11/wsl-terminal-0.8.11.zip",
+    "homepage":  "https://goreliu.github.io/wsl-terminal/",
+    "hash":  "AEA1D8DEFDC1DF6C31BE3A550E5CADD3348DB4C734C7A2BF8FAA5F6B7A510B1E",
+    "bin":  "open-wsl.exe",
+    "checkver": {
+        "url": "https://github.com/goreliu/wsl-terminal/releases/latest",
+        "re": "/goreliu/wsl-terminal/releases/download/v(?version>[\\d]+)/wsl-terminal-(?<version>[\\d.]+).zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/goreliu/wsl-terminal/releases/download/v$version/wsl-terminal-v$version.zip",
+        "extract_dir": "wsl-terminal"
+    },
+    "shortcuts": [
+        [
+            "open-wsl.exe",
+            "wsl-terminal"
+        ]
+    ]
+}
