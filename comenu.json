@@ -24,7 +24,7 @@
     "shortcuts": [
         [
             "ConEmu64.exe",
-            "ConEmu (x64)"
+            "ConEmu"
         ]
     ],
     "persist": [
