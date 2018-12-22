@@ -1,0 +1,51 @@
+{
+    "homepage": "https://mpv.io/",
+    "description": "Video player based on MPlayer/mplayer2 (builds by lachs0r)",
+    "license": "GPL-2.0-or-later|LGPL-2.1-or-later",
+    "version": "2018-10-02",
+    "url": [
+        "https://mpv.srsfckn.biz/mpv-x86_64-20181002.7z",
+        "https://github.com/rossy/mpv-install/archive/master.zip"
+    ],
+    "hash": [
+        "48edd28162495224b9ed80986eba1ea92e2e23de695f119afe369a4ce51b73c9",
+        "105A2E84C1FD4527D201C60F881A37852BBBEE42C73398F92CA929BD089BF05B"
+    ],
+    "bin": "mpv.exe",
+    "shortcuts": [
+        [
+            "mpv.exe",
+            "mpv"
+        ]
+    ],
+    "persist": "portable_config",
+    "post_install": [
+        "(Get-Content \"$(shimdir $global)\\mpv.ps1\").replace('mpv.exe','mpv.com') | Out-File \"$(shimdir $global)\\mpv.ps1\" -encoding utf8",
+        "(Get-Content \"$(shimdir $global)\\mpv.shim\").replace('mpv.exe','mpv.com') | Out-File \"$(shimdir $global)\\mpv.shim\" -encoding utf8"
+    ],
+    "extract_dir": [
+        ".",
+        "mpv-install-master"
+    ],
+    "extract_to": [
+        "",
+        ""
+    ],
+    "suggest": {
+        "youtube-dl": [
+            "youtube-dl"
+        ]
+    },
+    "notes": [
+        "- To set up file type associations and AutoPlay handlers run '~\\scoop\\apps\\mpv-git\\current\\mpv-install.bat' as administrator.",
+        "This doesn't need to be done everytime you update mpv-git however, do keep in mind that if you want to uninstall mpv-git you'll need to run '(same directory)\\mpv-uninstall.bat' beforehand since this action will not be performed automatically.",
+        "- You can use Icaros (https://www.majorgeeks.com/files/details/icaros.html) to enable thumbnails for all media types."
+    ],
+    "checkver": {
+        "url": "https://mpv.srsfckn.biz/",
+        "re": "latest\">\\s+<td>(?<version>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2}))"
+    },
+    "autoupdate": {
+        "url": "https://mpv.srsfckn.biz/mpv-x86_64-$matchYear$matchMonth$matchDay.7z"
+    }
+}
