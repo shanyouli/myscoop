@@ -19,5 +19,8 @@
             "open-wsl.exe",
             "wsl-terminal"
         ]
+    ],
+    "persist": [
+        "etc\\wsl-terminal.conf"
     ]
 }
