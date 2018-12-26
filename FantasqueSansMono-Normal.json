@@ -1,27 +1,27 @@
 {
-    "version": "0.7.0",
+    "version": "1.7.2",
     "license": "MIT",
-    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.7.0/sarasa-gothic-ttf-0.7.0.7z",
-    "hash": "CD4277B1B5B280B45EDB6A1AC9844CBC3B8262A1C2AAFA68E18FC8AAA0D4DE52",
+    "homepage": "https://github.com/belluzj/fantasque-sans",
+    "url": "https://github.com/belluzj/fantasque-sans/releases/download/v1.7.2/FantasqueSansMono-Normal.zip",
+    "hash": "F3C712D02B3F1F78A2BA1E5BE95F1366E75F910B22B7B9242449B2BD43D1F194",
     "checkver": "github",
     "depends": "sudo",
     "autoupdate": {
-        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z"
+        "url": "https://github.com/belluzj/fantasque-sans/releases/download/v$version/FantasqueSansMono-Normal.zip"
     },
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
-            "Get-ChildItem $dir | ForEach-Object {",
+            "Get-ChildItem $dir\\TTF | ForEach-Object {",
             "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
-            "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
+            "    Copy-Item \"$dir\\TTF\\$_\" -destination \"$env:windir\\Fonts\"",
             "}"
         ]
     },
     "uninstaller": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
-            "Get-ChildItem $dir  | ForEach-Object {",
+            "Get-ChildItem $dir\\TTF  | ForEach-Object {",
             "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
