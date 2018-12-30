@@ -1,0 +1,25 @@
+﻿{
+    "version":  "2.2.2",
+    "license":  "MIT",
+    "extract_dir":  "VimDesktop",
+    "url":  "https://github.com/goreliu/vimdesktop/releases/download/v2.2.2/VimDesktop-2.2.2.7z",
+    "depends":  "7zip",
+    "homepage":  "https://github.com/goreliu/vimdesktop",
+    "hash":  "76C5F33686F68160ABC27F5F4A7365B89216F5495CFF8881609793AC5EF84F1D",
+    "bin":  "vimd.exe",
+    "shortcuts": [
+        [
+            "vimd.exe",
+            "vimd"
+        ]
+    ],
+    "persist": [
+        "conf"
+    ],
+    "checkver": {
+        "github": "https://github.com/goreliu/vimdesktop"
+    },
+    "autoupdate": {
+        "url": "https://github.com/goreliu/vimdesktop/releases/download/v$version/VimDesktop-$version.7z"
+    }
+}
