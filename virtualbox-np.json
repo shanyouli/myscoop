@@ -1,0 +1,35 @@
+{
+    "##": "Copy from https://github.com/oltolm/scoop-nonportable/raw/master/virtualbox-np.json",
+    "homepage": "https://www.virtualbox.org/",
+    "description": "Powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use.",
+    "license": "GPL-2.0-only",
+    "version": "6.0.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.virtualbox.org/virtualbox/6.0.2/VirtualBox-6.0.2-128162-Win.exe#/VBoxSetup.exe",
+            "hash": "42e9d4a3120585a3578072ecbf77dc707119ac19f4588e3fa327acfd52b21c87"
+        }
+    },
+    "installer": {
+        "script": "Start-Process cmd -Verb Runas \"/c $dir\\VBoxSetup.exe --msiparams INSTALLDIR=$dir VBOX_START=0 --silent\" -Wait -WindowStyle hidden"
+    },
+    "post_install": "remove-item \"$dir\\VBoxSetup.exe\"",
+    "uninstaller": {
+        "script": [
+            "$id = wmic product where \"\"\"name like 'Oracle VM VirtualBox%'\"\"\" get IdentifyingNumber | find /i \"\"\"-\"\"\"",
+            "Start-Process cmd -Verb Runas \"/c msiexec /x $id /qn\" -Wait -WindowStyle hidden"
+        ]
+    },
+    "checkver": {
+        "url": "https://update.virtualbox.org/query.php?platform=WINDOWS_64BITS_GENERIC&version=6.0.0",
+        "re": "VirtualBox-(?<version>[\\d.]+)-(?<revision>[\\d]+)-Win.exe"
+    },
+    "autoupdate": {
+        "64bit": {
+            "url": "http://download.virtualbox.org/virtualbox/$version/VirtualBox-$version-$matchRevision-Win.exe#/VBoxSetup.exe",
+            "hash": {
+                "url": "https://www.virtualbox.org/download/hashes/$version/SHA256SUMS"
+            }
+        }
+    }
+}
