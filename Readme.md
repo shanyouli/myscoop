@@ -16,3 +16,5 @@
 - mpv
 - k-lite-codec-pack-basic
 - dismplus
+- virtualbox-np <https://github.com/oltolm/scoop-nonportable/raw/master/virtualbox-np.json>
+- ditto-np <https://raw.githubusercontent.com/oltolm/scoop-nonportable/master/ditto-np.json>
