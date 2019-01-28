@@ -14,7 +14,8 @@
 - [Listary](https://www.listary.com)
 - [wsl-terminal](https://goreliu.github.io/wsl-terminal/)
 - [mpv](https://mpv.io/)
-- k-lite-codec-pack-basic--For Total Commander preview mp4.etc
+- [k-lite-codec-pack-basic](http://www.codecguide.com/) -- For Total Commander preview mp4.etc
+
     I use quicklook replease it
 - [dismplus](https://www.chuyu.me/zh-Hans/index.html)
 - [virtualbox-np](https://www.virtualbox.org/)
