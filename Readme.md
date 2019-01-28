@@ -23,3 +23,5 @@
 - [irfanview-zh](https://www.irfanview.com/)
 - [riot](http://luci.criosweb.ro/riot/)
     as irfanview's Plugin
+- [TotalCommander](http://www.ghisler.com/)
+  飞扬时空定制版
