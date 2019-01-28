@@ -11,10 +11,15 @@
 
 ## apps
 
-- Listary
-- wsl-terminal
-- mpv
-- k-lite-codec-pack-basic
-- dismplus
-- virtualbox-np <https://github.com/oltolm/scoop-nonportable/raw/master/virtualbox-np.json>
-- ditto-np <https://raw.githubusercontent.com/oltolm/scoop-nonportable/master/ditto-np.json>
+- [Listary](https://www.listary.com)
+- [wsl-terminal](https://goreliu.github.io/wsl-terminal/)
+- [mpv](https://mpv.io/)
+- k-lite-codec-pack-basic--For Total Commander preview mp4.etc
+    I use quicklook replease it
+- [dismplus](https://www.chuyu.me/zh-Hans/index.html)
+- [virtualbox-np](https://www.virtualbox.org/)
+    <https://github.com/oltolm/scoop-nonportable/raw/master/virtualbox-np.json>
+- [emacs-dev(27.0.5)](https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/)
+- [irfanview-zh](https://www.irfanview.com/)
+- [roit](http://luci.criosweb.ro/riot/)
+    as irfanview's Plugin

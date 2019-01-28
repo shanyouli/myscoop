@@ -1,0 +1,15 @@
+{
+    "##": "As the plugin of irfanview.",
+    "home": "http://luci.criosweb.ro/riot/",
+    "url": "https://www.dropbox.com/s/rpi9v57y1yx4qpd/Riot.zip?dl=1",
+    "extract_dir": "Roit",
+    "bin": [
+        "Roit.exe"
+    ],
+    "shortcuts": [
+        [
+            "Roit.exe",
+            "Roit"
+        ]
+    ]
+}
