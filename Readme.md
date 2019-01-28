@@ -19,7 +19,7 @@
 - [dismplus](https://www.chuyu.me/zh-Hans/index.html)
 - [virtualbox-np](https://www.virtualbox.org/)
     <https://github.com/oltolm/scoop-nonportable/raw/master/virtualbox-np.json>
-- [emacs-dev(27.0.5)](https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/)
+- [emacs-dev(27.0.50)](https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/)
 - [irfanview-zh](https://www.irfanview.com/)
-- [roit](http://luci.criosweb.ro/riot/)
+- [riot](http://luci.criosweb.ro/riot/)
     as irfanview's Plugin

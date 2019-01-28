@@ -3,14 +3,14 @@
     "home": "http://luci.criosweb.ro/riot/",
     "url": "https://www.dropbox.com/s/rpi9v57y1yx4qpd/Riot.zip?dl=1#/Roit_0.6.1.zip",
     "version": "0.6.1",
-    "extract_dir": "Roit",
+    "extract_dir": "Riot",
     "bin": [
-        "Roit.exe"
+        "Riot.exe"
     ],
     "shortcuts": [
         [
-            "Roit.exe",
-            "Roit"
+            "Riot.exe",
+            "Riot"
         ]
     ]
 }
