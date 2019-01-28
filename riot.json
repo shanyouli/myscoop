@@ -1,7 +1,8 @@
 {
     "##": "As the plugin of irfanview.",
     "home": "http://luci.criosweb.ro/riot/",
-    "url": "https://www.dropbox.com/s/rpi9v57y1yx4qpd/Riot.zip?dl=1#/Roit_0.6.1.zip",
+    "url": "https://github.com/lye95/Scoop_Zip/raw/master/Riot_0.6.1.zip",
+    "hash": "B17610CCB2612153B07DB68AC2234D018CC67A160812A729D599E846E1138EB2",
     "version": "0.6.1",
     "extract_dir": "Riot",
     "bin": [
