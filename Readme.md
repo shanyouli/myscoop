@@ -8,6 +8,7 @@
 - Source Code Nerd
 - Sarasa Gothic font
 - Hack Nerd
+- Source Code Pro
 
 ## apps
 
