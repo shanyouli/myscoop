@@ -1,0 +1,37 @@
+{
+    "version": "2015-12-04",
+    "homepage": "https://github.com/powerline/fonts",
+    "url": "https://github.com/powerline/fonts/archive/2015-12-04.zip",
+    "hash": "B6673E0E28441CC04065F8E5C79960AEAA220DAE52351852B37E6CF3A03BB8AF",
+    "checkver": "github",
+    "depends": "sudo",
+    "autoupdate": {
+        "url": "https://github.com/powerline/fonts/archive/$version.zip"
+    },
+    "extract_dir": ".\\fonts-2015-12-04\\DejaVuSansMono",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "    Remove-Item \"$dir\\fonts.dir\" -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$dir\\LICENSE.txt\" -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$dir\\fonts.scale\" -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$dir\\README.rst\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The '$($app)' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
