@@ -3,7 +3,7 @@
     "license": "MIT",
     "homepage": "https://github.com/adobe-fonts/source-code-pro",
     "url": "https://github.com/lye95/Scoop_Zip/raw/master/Source-code-pro_2.030.zip",
-    "hash": "176E7363BE8620C8ABCE2C96DF845F0DBE158360DFC4EC89DEA6898B5DEC0B59",
+    "hash": "F687176BB1153746995EBDD056F8644A4D1232912C4B09527870C960C5E14BA4",
     "checkver": "github",
     "depends": "sudo",
     "autoupdate": {
