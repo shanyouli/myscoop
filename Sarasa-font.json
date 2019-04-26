@@ -1,8 +1,8 @@
 {
-    "version": "0.7.2",
+    "version": "0.8.1",
     "license": "MIT",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.7.2/sarasa-gothic-ttf-0.7.2.7z",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttc-$version.7z",
     "hash": "31E8C2A4AE26CE20379CAF4FDED0C74B5AD4125F24381D89FFBBD41E746BA30A",
     "checkver": "github",
     "depends": "sudo",
