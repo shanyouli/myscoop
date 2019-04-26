@@ -3,7 +3,7 @@
     "license": "MIT",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.7.2/sarasa-gothic-ttf-0.7.2.7z",
-    "hash": "AAAB515F1FB5866C6188D83FFB23A16DB1D8EDDAB25D602A79694A0B316828D2",
+    "hash": "31E8C2A4AE26CE20379CAF4FDED0C74B5AD4125F24381D89FFBBD41E746BA30A",
     "checkver": "github",
     "depends": "sudo",
     "autoupdate": {
@@ -12,13 +12,7 @@
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
-            "Get-ChildItem $dir -filter 'sarasa-*-sc-*.ttf' | ForEach-Object {",
-            "    Remove-Item \"$dir\\sarasa-*-tc-*\" -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$dir\\sarasa-*-j-*\" -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$dir\\sarasa-*-hc-*\" -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$dir\\sarasa-*-cl-*\" -Force -ErrorAction SilentlyContinue",
-            "}",
-            "Get-ChildItem $dir -filter 'sarasa-*-sc-*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
             "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
             "}"
@@ -27,7 +21,7 @@
     "uninstaller": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
-            "Get-ChildItem $dir -filter 'sarasa-*-sc-*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
             "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",

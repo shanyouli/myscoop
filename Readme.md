@@ -2,13 +2,14 @@
 
 ## Use font
 
-- Copy from <https://github.com/matthewjberger/scoop-nerd-fonts>
-- Fira Code Nerd
-- Fira Mono Nerd
-- Source Code Nerd
-- Sarasa Gothic font
-- Hack Nerd
-- Source Code Pro
+1. Copy from <https://github.com/matthewjberger/scoop-nerd-fonts>
+2. Fira Code Nerd
+3. Fira Mono Nerd
+4. Source Code Nerd
+5. Sarasa Gothic font <https://github.com/be5invis/Sarasa-Gothic>
+    > 使用 sarasa-gothic-.ttc 取代 sarasa-gothic.ttf
+6. Hack Nerd
+7. Source Code Pro
 
 ## apps
 
