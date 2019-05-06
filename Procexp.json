@@ -1,0 +1,12 @@
+{
+    "version": "16.22",
+    "url": "https://download.sysinternals.com/files/ProcessExplorer.zip",
+    "homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+    "bin": "procexp64.exe",
+    "shortcuts": [
+        [
+            "procexp64.exe",
+            "Procexp"
+        ]
+    ]
+}

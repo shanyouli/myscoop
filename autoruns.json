@@ -1,0 +1,12 @@
+{
+    "version": "13.94",
+    "url": "https://download.sysinternals.com/files/Autoruns.zip",
+    "homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns",
+    "bin": "autoruns64.exe",
+    "shortcuts": [
+        [
+            "autoruns64.exe",
+            "AutoRuns"
+        ]
+    ]
+}

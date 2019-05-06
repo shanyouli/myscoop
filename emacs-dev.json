@@ -1,32 +1,32 @@
 {
-    "homepage": "https://www.gnu.org/software/emacs/",
-    "license": "GPL-3.0-only",
-    "version": "27.0.20190426",
-    "architecture": {
-        "64bit": {
-            "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-27.0.50-snapshot-2019-04-26-x86_64.zip"
-        },
-        "32bit": {
-            "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-27.0.50-snapshot-2019-04-26-i686.zip"
-        }
+  "homepage": "https://www.gnu.org/software/emacs/",
+  "license": "GPL-3.0-only",
+  "version": "27.0.20190426",
+  "architecture": {
+    "64bit": {
+      "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-27.0.50-snapshot-2019-04-26-x86_64.zip"
     },
-    "extract_dir": ".",
-    "bin": [
-        "bin\\runemacs.exe",
-        "bin\\emacs.exe",
-        "bin\\emacsclientw.exe",
-        "bin\\etags.exe",
-        "bin\\ctags.exe"
+    "32bit": {
+      "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-27.0.50-snapshot-2019-04-26-i686.zip"
+    }
+  },
+  "extract_dir": ".",
+  "bin": [
+    "bin\\runemacs.exe",
+    "bin\\emacs.exe",
+    "bin\\emacsclientw.exe",
+    "bin\\etags.exe",
+    "bin\\ctags.exe"
+  ],
+  "shortcuts": [
+    [
+      "bin\\runemacs.exe",
+      "Emacs"
     ],
-    "shortcuts": [
-        [
-            "bin\\runemacs.exe",
-            "Emacs"
-        ],
-        [
-            "bin\\emacsclientw.exe",
-            "Emacs Client",
-            "-c -n -a \"\""
-        ]
+    [
+      "bin\\emacsclientw.exe",
+      "Emacs Client",
+      "-c -n -a \"\""
     ]
+  ]
 }
