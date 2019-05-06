@@ -5,14 +5,13 @@
     "url": "https://github.com/domtronn/all-the-icons.el/archive/3.2.0.zip",
     "hash": "4C92665D72409087D8774D084CDA67358ECC853EFAB43467EBF1F94235CDEBBE",
     "checkver": "github",
-    "depends": "sudo",
     "autoupdate": {
         "url": "https://github.com/domtronn/all-the-icons.el/archive/$version.zip"
     },
     "extract_dir": ".\\all-the-icons.el-3.2.0\\fonts",
     "installer": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1 }",
             "Get-ChildItem $dir '*.json' | ForEach-Object {",
             "    Remove-Item \"$dir\\*.json\" -Force -ErrorAction SilentlyContinue",
             "}",
