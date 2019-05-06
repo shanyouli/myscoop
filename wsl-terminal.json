@@ -1,10 +1,10 @@
 ﻿{
-    "version":  "0.8.12",
+    "version":  "0.8.13",
     "license":  "MIT",
     "extract_dir":  "wsl-terminal",
-    "url":  "https://github.com/goreliu/wsl-terminal/releases/download/v0.8.12/wsl-terminal-0.8.12.zip",
+    "url":  "https://github.com/goreliu/wsl-terminal/releases/download/v0.8.13/wsl-terminal-0.8.13.zip",
     "homepage":  "https://goreliu.github.io/wsl-terminal/",
-    "hash":  "14f522f803175ae308416c5662d2302ed7f4a42397d0550e6bc00723739ed0f3",
+    "hash":  "66e5ee175c61a6d53fb02fd80e2252f7220f62f0115060cd34767e70ac77eb32",
     "bin":  "open-wsl.exe",
     "checkver": {
         "url": "https://github.com/goreliu/wsl-terminal/releases/latest",
