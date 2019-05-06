@@ -5,13 +5,12 @@
     "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.8.1/sarasa-gothic-ttc-0.8.1.7z",
     "hash": "31E8C2A4AE26CE20379CAF4FDED0C74B5AD4125F24381D89FFBBD41E746BA30A",
     "checkver": "github",
-    "depends": "sudo",
     "autoupdate": {
         "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttc-$version.7z"
     },
     "installer": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1 }",
             "Get-ChildItem $dir -filter 'sarasa*.ttc' | ForEach-Object {",
             "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
@@ -20,7 +19,7 @@
     },
     "uninstaller": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/utils' and run 'sudo scoop uninstall $app'\"; exit 1 }",
             "Get-ChildItem $dir -filter 'sarasa*.ttc' | ForEach-Object {",
             "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",

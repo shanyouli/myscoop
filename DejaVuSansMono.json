@@ -4,14 +4,13 @@
     "url": "https://github.com/powerline/fonts/archive/2015-12-04.zip",
     "hash": "B6673E0E28441CC04065F8E5C79960AEAA220DAE52351852B37E6CF3A03BB8AF",
     "checkver": "github",
-    "depends": "sudo",
     "autoupdate": {
         "url": "https://github.com/powerline/fonts/archive/$version.zip"
     },
     "extract_dir": ".\\fonts-2015-12-04\\DejaVuSansMono",
     "installer": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1 }",
             "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
             "    Remove-Item \"$dir\\fonts.dir\" -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$dir\\LICENSE.txt\" -Force -ErrorAction SilentlyContinue",
@@ -26,7 +25,7 @@
     },
     "uninstaller": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' run 'sudo scoop uninstall $app'\"; exit 1 }",
             "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
             "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
