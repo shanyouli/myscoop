@@ -8,8 +8,7 @@
 4. Source Code Nerd
 5. Sarasa Gothic font <https://github.com/be5invis/Sarasa-Gothic>
     > 使用 sarasa-gothic-.ttc 取代 sarasa-gothic.ttf
-6. Hack Nerd
-7. Source Code Pro
+6. Source Code Pro
 
 ## apps
 
