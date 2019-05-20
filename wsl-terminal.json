@@ -21,6 +21,9 @@
         ]
     ],
     "persist": [
-        "etc\\wsl-terminal.conf"
-    ]
+        "etc\\wsl-terminal.conf",
+        "etc\\minttyrc",
+        "etc\\themes"
+    ],
+    "notes": "See usage: https://github.com/goreliu/wsl-terminal#usage"
 }
