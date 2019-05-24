@@ -1,0 +1,30 @@
+{
+    "version": "1.4.1",
+    "license": "https://github.com/IBM/plex/blob/master/LICENSE.txt",
+    "homepage": "https://github.com/IBM/plex",
+    "url": "https://github.com/IBM/plex/releases/download/v1.4.1/OpenType.zip",
+    "hash": "6D47E4D12895C9F56CE783488D18B4AA69C210E8D69867C8D397722CD0DE4EA3",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/IBM/plex/releases/download/v$version/OpenType.zip"
+    },
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1}",
+            "Get-ChildItem $dir | ForEach-Object {",
+            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace ($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "   Copy-Item \"$dir\\*\\IBMPlex*.otf\" -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir\\*  | ForEach-Object {",
+            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$env:windir\\Fonts\\IBMPlex*.otf\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The '$($app)' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
