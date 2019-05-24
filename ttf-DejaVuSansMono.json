@@ -1,22 +1,15 @@
 {
     "version": "2015-12-04",
     "homepage": "https://github.com/powerline/fonts",
-    "url": "https://github.com/powerline/fonts/archive/2015-12-04.zip",
-    "hash": "B6673E0E28441CC04065F8E5C79960AEAA220DAE52351852B37E6CF3A03BB8AF",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/powerline/fonts/archive/$version.zip"
-    },
-    "extract_dir": ".\\fonts-2015-12-04\\DejaVuSansMono",
+    "url": [
+        "https://raw.githubusercontent.com/powerline/fonts/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20Bold%20Oblique%20for%20Powerline.ttf",
+        "https://raw.githubusercontent.com/powerline/fonts/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20Bold%20for%20Powerline.ttf",
+        "https://raw.githubusercontent.com/powerline/fonts/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20Oblique%20for%20Powerline.ttf",
+        "https://raw.githubusercontent.com/powerline/fonts/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf"
+    ],
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1 }",
-            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
-            "    Remove-Item \"$dir\\fonts.dir\" -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$dir\\LICENSE.txt\" -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$dir\\fonts.scale\" -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$dir\\README.rst\" -Force -ErrorAction SilentlyContinue",
-            "}",
             "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
             "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
