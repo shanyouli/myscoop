@@ -39,7 +39,7 @@
             "Get-ChildItem $dir\\IBM-Plex-Thai-Looped | ForEach-Object {",
             "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace ($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "}",
-            "Copy-Item \"$dir\\*\\IBMPlex*.otf\" -destination \"$env:windir\\Fonts\"",
+            "Copy-Item \"$dir\\*\\IBMPlex*.otf\" -destination \"$env:windir\\Fonts\""
         ]
     },
     "uninstaller": {
