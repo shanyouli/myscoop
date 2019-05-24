@@ -20,3 +20,5 @@
 - [irfanview-zh](https://www.irfanview.com/)
 - [riot](http://luci.criosweb.ro/riot/)  --- as irfanview's Plugin
 - [TotalCommander](http://www.ghisler.com/) --- 飞扬时空定制版
+- [autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns)
+- [Procexp](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
