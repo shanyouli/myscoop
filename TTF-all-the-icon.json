@@ -2,19 +2,17 @@
     "version": "3.2.0",
     "license": "MIT",
     "homepage": "https://github.com/domtronn/all-the-icons.el",
-    "url": "https://github.com/domtronn/all-the-icons.el/archive/3.2.0.zip",
-    "hash": "4C92665D72409087D8774D084CDA67358ECC853EFAB43467EBF1F94235CDEBBE",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/domtronn/all-the-icons.el/archive/$version.zip"
-    },
-    "extract_dir": ".\\all-the-icons.el-3.2.0\\fonts",
+    "url": [
+        "https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/all-the-icons.ttf",
+        "https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/file-icons.ttf",
+        "https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/fontawesome.ttf",
+        "https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/material-design-icons.ttf",
+        "https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/octicons.ttf",
+        "https://raw.githubusercontent.com/domtronn/all-the-icons.el/master/fonts/weathericons.ttf"
+    ],
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1 }",
-            "Get-ChildItem $dir '*.json' | ForEach-Object {",
-            "    Remove-Item \"$dir\\*.json\" -Force -ErrorAction SilentlyContinue",
-            "}",
             "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
             "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
@@ -24,7 +22,7 @@
     "uninstaller": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
-            "Get-ChildItem $dir -filter  | ForEach-Object {",
+            "Get-ChildItem $dir   | ForEach-Object {",
             "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
