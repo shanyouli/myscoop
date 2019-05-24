@@ -2,8 +2,8 @@
     "##": "Total Commander 自用版本",
     "home": "http://www.ghisler.com",
     "version": "5.15.4",
-    "url": "https://github.com/lye95/Scoop_Zip/raw/master/TotalCMD64_5.15.4.zip",
-    "hash": "E1AB6462F0006F524DBD20A964F6F6E2C826F40EC5E29532E883260C64F4683C",
+    "url": "https://github.com/lye95/Scoop_Zip/raw/master/TotalCmd64-5.18.7z",
+    "hash": " 9FEA60BDFC1FEE8311489562CD236A9E52E1774CB4B459AA77251542F1ACD67A",
     "extract_dir": "TotalCMD64",
     "bin": "Totalcmd64.exe",
     "shortcuts": [
