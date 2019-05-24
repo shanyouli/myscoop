@@ -8,6 +8,7 @@
     "autoupdate": {
         "url": "https://github.com/IBM/plex/releases/download/v$version/OpenType.zip"
     },
+    "extract_dir": ".\\OpenType",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop install $app'\"; exit 1}",
