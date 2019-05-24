@@ -4,7 +4,7 @@
     "version": "5.18",
     "url": "https://github.com/lye95/Scoop_Zip/raw/master/TotalCmd64-5.18.7z",
     "hash": "9FEA60BDFC1FEE8311489562CD236A9E52E1774CB4B459AA77251542F1ACD67A",
-    "extract_dir": "TotalCMD64",
+    "extract_dir": "TotalCmd64-5.18",
     "bin": "Totalcmd64.exe",
     "shortcuts": [
         [
