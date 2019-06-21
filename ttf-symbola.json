@@ -1,0 +1,31 @@
+{
+    "version": "v12.00",
+    "license": "MIT",
+    "homepage": "http://users.teilar.gr/~g1951d/",
+    "url": "http://users.teilar.gr/~g1951d/Symbola.zip",
+    "hash": "8101AE2282E0EE788DCEABED7D9A49BE189AD0196028B2C29D06B45821611F05",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "http://users.teilar.gr/~g1951d/Symbola.zip"
+    },
+    "extract_dir": ".",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please install sudo/psutils and run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem $dir | ForEach-Object {",
+            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please install 'sudo/psutils' and run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir  | ForEach-Object {",
+            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The '$($app)' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
