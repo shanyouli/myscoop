@@ -2,7 +2,7 @@
     "##": "Total Commander 自用版本",
     "home": "http://www.ghisler.com",
     "version": "5.18",
-    "url": "https://github.com/lye95/Scoop_Zip/raw/master/TotalCmd64-5.18.7z",
+    "url": "https://github.com/shanyouli/Scoop_Zip/raw/master/TotalCmd64-5.18.7z",
     "hash": "93EF99421725208FA98D5B62FAB287D77D0964338D85F803F0CBFB6341C539C9",
     "extract_dir": "TotalCmd64",
     "bin": "Totalcmd64.exe",
