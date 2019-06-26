@@ -1,5 +1,5 @@
 {
-    "version": "16.22",
+    "version": "16.25",
     "url": "https://download.sysinternals.com/files/ProcessExplorer.zip",
     "homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer",
     "bin": "procexp64.exe",
